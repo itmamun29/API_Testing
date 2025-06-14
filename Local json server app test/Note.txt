@@ -1,0 +1,15 @@
+My own json resource file , I make it is for api testing and some validation testing .
+http request check.
+
+1. GET request, 2. POST request, 3. PUT request, 4. PATCH request.
+validation check.
+
+1. GET status code, 2. JSON value check, 3. Response body check ,
+4. Response header check, 5. Successful POST status code.
+Run the Local_app.json file into the JSON-server.
+open cmd.
+json-server run student.json (hit enter).
+then import the file on postman .(Local APP Test.postman_collection.json)
+
+
+

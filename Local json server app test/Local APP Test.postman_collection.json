@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "e232bcf9-9372-48a9-a7fb-30eac67db499",
+		"name": "Local APP Test",
+		"description": "My own json resource file , I make it is for api testing and some validation testing .\n\n- **http request check.**\n    \n\n1\\. GET request, 2. POST request, 3. PUT request, 4. PATCH request.\n\n- **validation check.**\n    \n\n1\\. GET status code, 2. JSON value check, 3. Response body check ,\n\n4\\. Response header check, 5. Successful POST status code.\n\nRun the Local_app.json file into the JSON-server.\n\n- open cmd.\n    \n- json-server run student.json (hit enter).\n    \n- then import the file on postman .(Local APP Test.postman_collection.json)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44888422",
+		"_collection_link": "https://mamun-2196736.postman.co/workspace/mamun's-Workspace~13a2c1fe-dc3c-45c1-8031-edb266bbe063/collection/44888422-e232bcf9-9372-48a9-a7fb-30eac67db499?action=share&source=collection_link&creator=44888422"
+	},
+	"item": [
+		{
+			"name": "http GET Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"GET status code 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", () => {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http POST Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request 201\", () =>{\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,202]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify the status text - appear\", () =>{\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify is the response time is less than 200ms\", () => {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"header is available Content-Type\", () => {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify the response body\", () => {\r",
+							"    let jsonData = pm.response.json();\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sname\":\"toma\",\r\n    \"class\":\"ten\",\r\n    \"Location\":\"Bangladesh\",\r\n    \"course\":[\r\n        \"h.math\",\r\n        \"Biggan\"\r\n    ],\r\n    \"group\":\"science\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http PUT Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check status code 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sname\":\"razzak\",\r\n    \"class\":\"ten\",\r\n    \"Location\":\"Bangladesh\",\r\n\r\n    \"group\":\"science\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/student/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http PATCH Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check status code 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sname\":\"Mukta\",\r\n    \"class\":\"ten\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/student/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http Delete Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Not Found\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/student/7c39",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student",
+						"7c39"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,432 @@
+{
+	"id": "984bdc8f-4836-45c8-8e16-5ddde386d1d4",
+	"name": "Local APP Test",
+	"timestamp": "2025-06-14T09:29:45.867Z",
+	"collection_id": "44888422-e232bcf9-9372-48a9-a7fb-30eac67db499",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 100,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-06-14T09:29:40.873Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "107c3d11-8d46-4fd4-b699-fd44133d5f3f",
+			"name": "http GET Request",
+			"url": "http://localhost:3000/student",
+			"time": 58,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"GET status code 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"GET status code 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				37,
+				58,
+				33,
+				32,
+				17,
+				31,
+				31,
+				35,
+				47,
+				58
+			],
+			"allTests": [
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"GET status code 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "cb82b76a-cc74-457e-a571-c25560fa096b",
+			"name": "http POST Request",
+			"url": "http://localhost:3000/student",
+			"time": 17,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Successful POST request 201": true,
+				"verify the status text - appear": true,
+				"verify is the response time is less than 200ms": true,
+				"header is available Content-Type": true,
+				"verify the response body": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request 201": {
+					"pass": 10,
+					"fail": 0
+				},
+				"verify the status text - appear": {
+					"pass": 10,
+					"fail": 0
+				},
+				"verify is the response time is less than 200ms": {
+					"pass": 10,
+					"fail": 0
+				},
+				"header is available Content-Type": {
+					"pass": 10,
+					"fail": 0
+				},
+				"verify the response body": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				15,
+				17,
+				21,
+				13,
+				13,
+				12,
+				9,
+				19,
+				13,
+				17
+			],
+			"allTests": [
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				},
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				},
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				},
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				},
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				},
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				},
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				},
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				},
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				},
+				{
+					"Successful POST request 201": true,
+					"verify the status text - appear": true,
+					"verify is the response time is less than 200ms": true,
+					"header is available Content-Type": true,
+					"verify the response body": true
+				}
+			]
+		},
+		{
+			"id": "09ac4c2e-99a9-4448-b00e-4fc409d96563",
+			"name": "http PUT Request",
+			"url": "http://localhost:3000/student/7",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code 200": true
+			},
+			"testPassFailCounts": {
+				"check status code 200": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				21,
+				14,
+				9,
+				9,
+				24,
+				9,
+				9,
+				53,
+				10,
+				16
+			],
+			"allTests": [
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				}
+			]
+		},
+		{
+			"id": "6e5906d3-3c02-4272-98b3-5902037e455a",
+			"name": "http PATCH Request",
+			"url": "http://localhost:3000/student/7",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code 200": true
+			},
+			"testPassFailCounts": {
+				"check status code 200": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				28,
+				12,
+				20,
+				9,
+				9,
+				12,
+				8,
+				21,
+				10,
+				19
+			],
+			"allTests": [
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				},
+				{
+					"check status code 200": true
+				}
+			]
+		},
+		{
+			"id": "7bd3ef1f-f16f-4072-9545-abba1e177151",
+			"name": "http Delete Request",
+			"url": "http://localhost:3000/student/7c39",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Body matches string": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				3,
+				3,
+				3,
+				4,
+				3,
+				3,
+				3,
+				6,
+				3,
+				5
+			],
+			"allTests": [
+				{
+					"Body matches string": true
+				},
+				{
+					"Body matches string": true
+				},
+				{
+					"Body matches string": true
+				},
+				{
+					"Body matches string": true
+				},
+				{
+					"Body matches string": true
+				},
+				{
+					"Body matches string": true
+				},
+				{
+					"Body matches string": true
+				},
+				{
+					"Body matches string": true
+				},
+				{
+					"Body matches string": true
+				},
+				{
+					"Body matches string": true
+				}
+			]
+		}
+	],
+	"count": 10,
+	"totalTime": 886,
+	"collection": {
+		"requests": [
+			{
+				"id": "107c3d11-8d46-4fd4-b699-fd44133d5f3f",
+				"method": "GET"
+			},
+			{
+				"id": "cb82b76a-cc74-457e-a571-c25560fa096b",
+				"method": "POST"
+			},
+			{
+				"id": "09ac4c2e-99a9-4448-b00e-4fc409d96563",
+				"method": "PUT"
+			},
+			{
+				"id": "6e5906d3-3c02-4272-98b3-5902037e455a",
+				"method": "PATCH"
+			},
+			{
+				"id": "7bd3ef1f-f16f-4072-9545-abba1e177151",
+				"method": "DELETE"
+			}
+		]
+	}
+}
